@@ -14,7 +14,7 @@ import eu.ensg.ing19.pointofinterest.dataaccess.DataBaseHelper;
 import eu.ensg.ing19.pointofinterest.dataaccess.UserDAO;
 import eu.ensg.ing19.pointofinterest.dataobject.User;
 
-public class SignInActivity extends AppCompatActivity {
+public class SignInActivity extends AppCompatActivity implements Constants {
 
     private EditText ed_firstname, ed_lastname, ed_email, ed_pass;
     private Button bt_login, bt_cancel;
@@ -53,6 +53,12 @@ public class SignInActivity extends AppCompatActivity {
         db = dataBaseHelper.getWritableDatabase();
         userDAO = new UserDAO(db);
 
+        Intent intent = getIntent();
+        if (intent != null) {
+            String email = intent.getStringExtra(Constants.EXTRA_EMAIL);
+            ed_email.setText(email);
+        }
+
     }
 
     private void createUser() {
@@ -89,7 +95,7 @@ public class SignInActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MapsActivity.class);
 
         // Put extra
-        intent.putExtra(Constants.EXTRA_USER, user);
+        intent.putExtra(EXTRA_USER, user);
 
         // Start activity
         this.startActivity(intent);

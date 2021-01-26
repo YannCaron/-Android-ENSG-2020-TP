@@ -60,6 +60,12 @@ public class LoginActivity extends AppCompatActivity implements Constants{
         DataBaseHelper dataBaseHelper = new DataBaseHelper(this);
         db = dataBaseHelper.getWritableDatabase();
         userDAO = new UserDAO(db);
+
+
+        // TODO : for debug
+        ed_email.setText("cyann74@gmail.com");
+        ed_password.setText("toto");
+
     }
 
     private void tryLogin() {

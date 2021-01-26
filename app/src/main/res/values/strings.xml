@@ -8,4 +8,9 @@
     <string name="lastname_text">Last name</string>
     <string name="cancel_text">Cancel</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="service_not_available">Unable to access service!</string>
+    <string name="invalid_lat_long_used">Invalid position!</string>
+    <string name="no_address_found">Address not found!</string>
+    <string name="address_found">Geocoding succeed.</string>
 </resources>
