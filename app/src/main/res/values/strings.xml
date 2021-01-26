@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PointOfInterest</string>
+    <string name="email_text">EMail</string>
+    <string name="password_text">Password</string>
+    <string name="sign_in_text">Sign in</string>
+    <string name="login_text">login</string>
+    <string name="firstname_tet">First name</string>
+    <string name="lastname_text">Last name</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
